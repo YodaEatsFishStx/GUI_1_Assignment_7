@@ -139,7 +139,11 @@ body{
 
 #tabs li a
 {
-    margin: 6px 0px;
+    outline: none;
+}
+
+#tabs ul li
+{
     outline: none;
 }
 
