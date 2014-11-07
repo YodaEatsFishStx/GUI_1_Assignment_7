@@ -113,7 +113,9 @@ body{
 #tabs .ui-state-default a{
     padding: 0px 20px;
 }
-
+#tabs .ui-state-focus{
+   border-style:none;
+}
 #tabs .ui-tabs-nav { 
     padding-left: 0px; 
     background: transparent; 
