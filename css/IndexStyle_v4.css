@@ -114,9 +114,10 @@ body{
     padding: 0px 20px;
 }
 
-#tabs .ui-state-focus{
-border-style:none;
-}
+#tabs li a
+{
+    outline: none;
+}​
 
 #tabs .ui-tabs-nav { 
     padding-left: 0px; 
