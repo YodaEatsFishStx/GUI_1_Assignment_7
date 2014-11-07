@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/* File: IndexStyle_v4.css
+   91.461 GUI Programming 1, Assignment 7: Creating a Single-Page Navigation Interface
+   David Lordan, UMass Lowell Computer Science, david_lordan@student.uml.edu
+   Created on November 1st, 2014, Updated on November 6th, 2014 9:52 PM.
+
+   NOTE:  This is a major re-styling of my index page. The most notable change is that all the pages are now organized in
+   a single-page interface. Navigation is implemented with hash fragments and jQuery. This page also makes use of
+   the JQuery UI tabs for the navigation bar.
+
+   IMPORTANT NOTE: This CSS file does NOT pass validation. The validation warnings
+   are due to the code found at http://keith-wood.name/uitabs.html which is used to style the
+   JQuery UI tabs.
+
+   This is a font that was imported from google fonts. It is used for all text on the site other than the nav bar. */
+@import url('http://fonts.googleapis.com/css?family=Ubuntu');
+
+/* Style for entire content of index page. Adds some padding for space. 
+   Also applies font imported from google.  */
+body{
+    font-family: 'Ubuntu', sans-serif;                   
+    padding-top: 10px;
+    height:100%;
+    background-color:black;
+}
+
+/* Style for top banner. */
+#header{
+
+    color: white;
+    text-align: left;
+    margin-bottom: 11px;
+
+}
+
+/* Additional styleing for banner text. */
+#header h1{
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+/* General theme for each page on the site. Light blue background, rounded border.
+   Padding for space.*/
+.main_layout{
+    padding-left: 20px;
+    background-color: #88FF99;
+    border-style: solid;
+    padding-bottom: 20px;
+    border-radius: 5px ;
+}
+
+/* Additional space added for lenghty sections of text. */
+.main_layout p {
+    padding-left: 20px;
+    padding-bottom: 8px;
+    padding-right: 20px;
+    line-height: 1.4em; 
+}
+
+
+/* Style for placing pictures in the main_layout box. Solution was found at:
+   http://stackoverflow.com/questions/10989238/center-align-image-within-div-horizontally
+   Used the code provided by member mk.hd.    */
+.main_layout img {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style for contact icons, such as email, Facebook and Twitter. Creates a mild
+   zoom effect when the cursor is held over the icons. */
+#Contact{
+    text-align: center;
+}
+#Contact img{
+    margin-top: 0px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width:45px; 
+    height: auto;
+    margin-bottom: 5px;
+
+}
+
+#Contact img:hover{
+    width: 50px;
+    margin-bottom: 0px;
+}
+
+
+/* Style section for navigation bar. As the navigation bar is implemented with JQuery UI tabs, the vast majority
+   of the styling is provided by JQuery. The section below overides some of those styling rules to remove the  header 
+   background. Most of this code was found at http://keith-wood.name/uitabs.html with minor syling modificaitons. 
+   As well as color changes, font changes were added to the active tab. A top border radius was also added to each tab. */
+#tabs { 
+    padding: 0px; 
+    background: none; 
+    border-width: 0px; 
+} 
+
+#tabs .ui-state-default{
+    background: #ddffff;
+    border-top-left-radius:  10px;
+    border-top-right-radius: 10px;
+}
+
+#tabs .ui-state-default a{
+    padding: 0px 20px;
+}
+
+#tabs .ui-tabs-nav { 
+    padding-left: 0px; 
+    background: transparent; 
+    border-width: 0px 0px 1px 0px; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+
+#tabs .ui-tabs-panel { 
+    background-color: #ddffff;
+    border-width: 0px 1px 1px 1px; 
+}
+
+#tabs .ui-widget-header{
+    border-bottom-color: black;
+}
+
+#tabs li.ui-tabs-active a, ul.tabs li.ui-tabs-selected a{ 
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* Minor styling for list items, such as the assignments list. */
+li {
+    line-height: 2em;
+    color: black;
+}
+
+li a{
+    color: black;
+}
+li a:visited{
+    color: black;
+}
+
+
+/* Styling for the foot, forcing it to the bottom of the page. */
+footer {
+    color:white;
+    width:100%;
+    height:25px;
+    position:fixed;
+    bottom:0;
+    left:0;
+    background:black;
+    border-top: solid;
+    border-color: white;
+    border-width: 2px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+/* Stying for the email address link within the footer. */
+footer a{
+    color:white;
+    text-decoration: none;
+}
+
+/* Minor styling for the placement of embedded videos. */
+.videos{
+    text-align: center;
+    width:100%;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>David Lordan - GUI Programming 1 - Index Page_v3</title>
+        <meta charset="utf-8">
+        <!--
+             File: index.html
+             91.461 GUI Programming 1, Assignment 7: Creating a Single-Page Navigation Interface
+             David Lordan, UMass Lowell Computer Science, david_lordan@student.uml.edu
+             Created on November 1st, 2014, Updated on November 6th, 2014 9:34 PM.
+
+             This is a major re-styling of my index page. The most notable change is that all the pages are now organized in
+             a single-page interface. Navigation is implemented with hash fragments and jQuery. This page also makes use of
+             the JQuery UI tabs for the navigation bar. 
+         
+             IMPORTANT NOTE: This is site does NOT pass CSS validation. The validation errors are due to
+             the external JQuery UI tab css file, which is required to use the UI tabs. -->
+        
+
+        <!-- Link to include the JQuery library.  -->
+        <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+        <!-- Link to custom CSS file. -->
+        <link href="css/IndexStyle_v4.css" rel="stylesheet" type="text/css">
+
+        <!-- Link to include the JQuery UI tab style sheet.-->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+
+        <!-- Link to include the JQuery UI library. -->
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+        <!-- Script function for the tab widget. The  complete code for the tab widget can be found at: http://jqueryui.com/tabs/-->
+        <script>
+            $(function () {
+                $("#tabs").tabs();
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <!-- Banner for top of front page which is stylized in the referenced CSS file. -->
+        <div id="header">
+            <h1>David Lordan - Computer Science, UML </h1>
+        </div>  <!-- End of banner div. -->
+
+        <!-- Section for navigation bar.  Implements the Navbar with the JQuery tabs widget. Each tab will change the
+             current location hash, which will in turn trigger a function that will place the contents of the 
+             various partial HTML files into the content placeholder for each section. -->
+        <div id="tabs">
+            <ul>
+                <!--  List of sub-pages for the site, and it's corresponding tab. -->
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#assignments">ASSIGNMENTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#music">MUSIC</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <!-- Dynamic content will be placed in the appropriate placeholder div by JavaScript. -->
+            <div id="home"></div>
+            <div id="assignments"></div>
+            <div id="about"></div>
+            <div id="music"></div>
+            <div id="contact"></div>
+        </div>  <!-- End of 'tabs' div. -->
+
+        <!-- The JavaScript code for dynamic behavior.  Written almost entirely by Curran Kelleher, with minor 
+             changes that are marked as such within the file. -->
+        <script src="navigation.js"></script>
+
+        <!-- Standard footer with the author's contact information. -->
+        <footer>
+            Created by David Lordan :  <a href="mailto:davidlordan@gmail.com"> davidlordan@gmail.com</a>
+        </footer> 
+
+    </body>
+
+</html>
+
