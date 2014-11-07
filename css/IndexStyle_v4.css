@@ -114,11 +114,6 @@ body{
     padding: 0px 20px;
 }
 
-#tabs li a
-{
-    outline: none;
-}​
-
 #tabs .ui-tabs-nav { 
     padding-left: 0px; 
     background: transparent; 
@@ -141,6 +136,11 @@ body{
     text-decoration: underline;
     font-weight: bold;
 }
+
+#tabs li a
+{
+    outline: none;
+}​
 
 
 /* Minor styling for list items, such as the assignments list. */
